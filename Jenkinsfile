@@ -9,7 +9,7 @@ pipeline {
     environment {
           PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
           DOCKERHUB_CREDENTIALS_ID = 'Docker-Hub'
-          DOCKERHUB_REPO = 'dun1a/temperatureConverter'
+          DOCKERHUB_REPO = 'dun1a/temperature-converter'
           DOCKER_IMAGE_TAG = 'v1'
       }
 
