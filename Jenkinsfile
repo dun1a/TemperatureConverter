@@ -9,7 +9,7 @@ pipeline {
     environment {
           PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
           DOCKERHUB_CREDENTIALS_ID = 'Docker-Hub'
-          DOCKERHUB_REPO = 'dun1a/sep1-in-class-assignment'
+          DOCKERHUB_REPO = 'dun1a/temperatureConverter'
           DOCKER_IMAGE_TAG = 'v1'
       }
 
@@ -18,7 +18,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/dun1a/SEP1-in-class-assignment'
+                git branch: 'main', url: 'https://github.com/dun1a/TemperatureConverter.git'
             }
         }
 
