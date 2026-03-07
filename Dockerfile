@@ -1,9 +1,6 @@
-FROM maven:3.9.6-eclipse-temurin-21 AS build
+FROM maven:3.9.6-eclipse-temurin-21
 WORKDIR /app
-COPY . .
+COPY pom.xml .
+COPY . /app
 RUN mvn clean package
-
-FROM eclipse-temurin:21-jdk
-WORKDIR /app
-COPY --from=build /app/target/TemperatureConverter.jar .
-CMD ["java", "-jar", "TemperatureConverter.jar"]
+CMD ["java", "-jar", "target/TemperatureConverter.jar"]
