@@ -1,6 +1,6 @@
 FROM maven:3.9.6-eclipse-temurin-21
 WORKDIR /app
-COPY pom.xml .
+#COPY pom.xml .
 COPY . /app
-RUN mvn package
+RUN mvn clean package
 CMD ["java", "-jar", "target/TemperatureConverter.jar"]
